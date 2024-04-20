@@ -1,1 +1,12 @@
-$border: #DCDCDC;
+$borderColor: #DCDCDC;
+$border: 0.5px solid $borderColor;
+$btn: #6495ED;
+$error: #DC143C;
+$shadow: #23232340;
+$primary: #FFFFFF;
+$breakpoints: (
+   xs: 0,
+   sm: 480px,
+   md: 760px,
+   lg: 1200px,
+);

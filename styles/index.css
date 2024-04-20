@@ -11,36 +11,114 @@
   font-family: freedoka;
 }
 
+@media (min-width: 0) {
+  form {
+    width: 300px;
+    height: 300px;
+  }
+  form div {
+    margin: 20px auto;
+  }
+  form div input {
+    height: 25px;
+  }
+  form div textarea {
+    height: 50px;
+    resize: none;
+  }
+  form div input, form div textarea {
+    font-size: 12px;
+  }
+  form .error, form .errorEmail {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 480px) {
+  form {
+    width: 400px;
+    height: 350px;
+  }
+  form div input {
+    height: 30px;
+  }
+  form div textarea {
+    height: 80px;
+  }
+  form div input, form div textarea {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 760px) {
+  form {
+    width: 500px;
+    height: 400px;
+  }
+  form div {
+    margin: 25px auto;
+  }
+  form div input {
+    height: 35px;
+  }
+  form div textarea {
+    height: 90px;
+  }
+  form div input, form div textarea {
+    font-size: 18px;
+  }
+  form .error, form .errorEmail {
+    font-size: 11px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  form {
+    width: 600px;
+    height: 480px;
+  }
+  form div {
+    margin: 30px auto;
+  }
+  form div input {
+    height: 40px;
+  }
+  form div textarea {
+    height: 100px;
+  }
+  form div input, form div textarea {
+    font-size: 20px;
+  }
+  form .error, form .errorEmail {
+    font-size: 13px;
+  }
+}
+
 form {
-  width: 300px;
-  height: 300px;
-  background-color: #ffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #FFFFFF;
   -webkit-box-shadow: 2px 8px 12px 5px #23232340;
           box-shadow: 2px 8px 12px 5px #23232340;
   border-radius: 10px;
 }
 
 form fieldset {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 90%;
-  height: 90%;
+  height: 96%;
   border: 0.5px solid #DCDCDC;
 }
 
 form fieldset div {
   width: 90%;
-  margin: 20px auto;
   position: relative;
 }
 
@@ -49,29 +127,34 @@ form fieldset div input, form fieldset div label, form fieldset div textarea {
 }
 
 form fieldset div input:focus, form fieldset div label:focus, form fieldset div textarea:focus {
-  border: 1px solid red;
+  outline: none;
+  border: 0.5px solid #DCDCDC;
 }
 
-form fieldset input[type="submit"] {
-  width: 90%;
+form fieldset div input[type="submit"] {
+  border: 0.5px solid #DCDCDC;
+  background-color: #6495ED;
+  color: #FFFFFF;
 }
 
-form fieldset input[type="submit"]:hover {
-  background-color: red;
+form fieldset div input[type="submit"]:hover {
+  background-color: #92b4f2;
 }
 
-.error input {
-  border: 0.5px solid red;
+.error input, .errorEmail input, .error textarea, .errorEmail textarea {
+  border: 0.5px solid #DC143C;
 }
 
-.error:after {
+.error:after, .errorEmail:after {
   content: 'field is mandatory';
   position: absolute;
-  width: 101%;
-  text-align: left;
-  top: 90%;
+  width: 100%;
+  top: 100%;
   left: 0;
-  color: red;
-  font-size: 10px;
+  color: #DC143C;
+}
+
+.errorEmail:after {
+  content: 'enter valid type';
 }
 /*# sourceMappingURL=index.css.map */
